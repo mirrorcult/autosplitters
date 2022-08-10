@@ -52,7 +52,7 @@ reset
 
 split
 {
-    return current.GameState == 0xFABCDE && (old.GameState == 0xCDEFAB || old.GameState == 0xDEFABC) && current.LevelType == 0xDDEEFF;
+    return (current.GameState == 0xFABCDE || current.GameState == 0xFFFFFF) && (old.GameState == 0xCDEFAB || old.GameState == 0xDEFABC) && current.LevelType == 0xDDEEFF;
 }
 
 gameTime
